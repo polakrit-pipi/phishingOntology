@@ -4,7 +4,7 @@ Phish Ontology Prototype
     pip install -r requirements.txt
 
 รันตัวอย่าง:
-    python example_run.py
+    uvicorn webapp:app --reload
 
 ไฟล์สำคัญ:
 - phish_detector/detector.py : โมดูลหลัก (feature extraction + reasoning)
