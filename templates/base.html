@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Phishing Detector</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; background: #f4f4f4; }
+    .card { background: white; padding: 1.5em; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,.1); max-width: 600px; margin:auto; }
+    input[type="text"] { width: 100%; padding: 0.6em; border: 1px solid #ccc; border-radius: 6px; }
+    button { padding: 0.6em 1.2em; border: none; background: #0066cc; color: white; border-radius: 6px; cursor: pointer; }
+    .result { margin-top: 1em; padding: 1em; border-radius: 8px; }
+    .phishing { background: #ffe5e5; color: #b30000; }
+    .legitimate { background: #e5ffe5; color: #006600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Phishing Detector</h2>
+<form method="post" action="/check">
+  <input type="text" name="url" placeholder="ใส่ URL ที่ต้องการตรวจสอบ" value="{{ url or '' }}" required>
+  <br><br>
+  <button type="submit">ตรวจสอบ</button>
+</form>
+
+{% if result %}
+  <div class="result {% if result.label == 'Phishing' %}phishing{% elif result.label == 'Legitimate' %}legitimate{% endif %}">
+    <h3>ผลลัพธ์: {{ result.label }}</h3>
+    <p>{{ result.explanation }}</p>
+    {% if result.justifications %}
+      <p><b>กฎที่ถูกกระทบ:</b> {{ result.justifications|join(', ') }}</p>
+    {% endif %}
+  </div>
+{% endif %}
+{% endblock %}
