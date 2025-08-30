@@ -5,6 +5,7 @@ Phish Ontology Prototype
 
 รันตัวอย่าง:
     uvicorn webapp:app --reload
+    
 
 ไฟล์สำคัญ:
 - phish_detector/detector.py : โมดูลหลัก (feature extraction + reasoning)
